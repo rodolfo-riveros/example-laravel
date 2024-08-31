@@ -320,6 +320,11 @@ return [
             'route' => 'admin.categoria.index',
             'icon' => 'fas fa-fw fa-edit',
         ],
+        [
+            'text' => 'Producto',
+            'route' => 'admin.producto.index',
+            'icon' => 'fas fa-fw fa-edit',
+        ],
         // [
         //     'text' => 'blog',
         //     'url' => 'admin/blog',

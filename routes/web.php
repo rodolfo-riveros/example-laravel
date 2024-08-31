@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoriaController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\ProductoController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('categoria', [CategoriaController::class, 'store'])->name('categoria.store');
     Route::put('categoria/{id}', [CategoriaController::class, 'update'])->name('categoria.update');
     Route::delete('categoria/{id}', [CategoriaController::class, 'destroy'])->name('categoria.destroy');
+
+    Route::get('producto', [ProductoController::class, 'index'])->name('producto.index');
+    Route::post('producto', [ProductoController::class, 'store'])->name('producto.store');
+    Route::put('producto/{id}', [ProductoController::class, 'update'])->name('producto.update');
+    Route::delete('producto/{id}', [ProductoController::class, 'destroy'])->name('producto.destroy');
 });
 
 require __DIR__.'/auth.php';
